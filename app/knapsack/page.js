@@ -6,7 +6,7 @@ import {motion, AnimatePresence} from 'framer-motion'
 import KnapsackQuestion from '@/components/KnapsackQuestion'
 import Link from 'next/link'
 
-function page() {
+function Page() {
     const [curQuestion, setCurQuestion] = useState(1)
     const [isCorrect, setIsCorrect] = useState(false)
     const [nextLevel, setNextLevel] = useState(false)
@@ -105,7 +105,7 @@ function page() {
             <h1 className="font-mono text-4xl"><Link href={'/'}>Algo Teacher</Link>: Can you knapsack?</h1>
         </div>
         <div className="">
-            <p>You just stumbled upon a treasure trove of <strong className='italic'>n</strong> items. For each item <strong className='italic'>n</strong> there is a value <strong className='italic'>v</strong> and a weight <strong className='italic'>u</strong>, where <strong className='italic'>u</strong> is the respective item's weight and <strong className='italic'>v</strong> is the respective items value. But unfortunately your bag can only hold a maximum weight of <strong className='italic'>w</strong> and there is only 1 of each items. </p>
+            <p>You just stumbled upon a treasure trove of <strong className='italic'>n</strong> items. For each item <strong className='italic'>n</strong> there is a value <strong className='italic'>v</strong> and a weight <strong className='italic'>u</strong>, where <strong className='italic'>u</strong> is the respective item&apos;s weight and <strong className='italic'>v</strong> is the respective items value. But unfortunately your bag can only hold a maximum weight of <strong className='italic'>w</strong> and there is only 1 of each items. </p>
             <p>Your goal is to maximize the total value of items in your bag.</p>
         </div>
             {
@@ -143,4 +143,4 @@ function page() {
   )
 }
 
-export default page
+export default Page

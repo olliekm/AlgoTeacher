@@ -4,7 +4,7 @@ import Image from 'next/image'
 import {motion, AnimatePresence} from 'framer-motion'
 import Link from 'next/link';
 
-function page() {
+function Page() {
   const [finish, setFinish] = useState(false)
   const goodText = {
     hidden: { opacity: 0, x:-200 },
@@ -117,4 +117,4 @@ function page() {
       )
 }
 
-export default page
+export default Page

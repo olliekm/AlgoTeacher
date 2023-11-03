@@ -1,3 +1,4 @@
+"use client";
 import React, {useState, useEffect} from 'react'
 import {motion, AnimatePresence, stagger} from 'framer-motion'
 
@@ -33,7 +34,7 @@ function KnapsackQuestion({w, v, u, n, ans, nextQuestion, cur}) {
       }
     useEffect(() => {
         document.getElementById(n+"this").scrollIntoView({behavior:"smooth"})
-    }, [])
+    })
     
 
     const [uInput, setUInput] = useState(0)

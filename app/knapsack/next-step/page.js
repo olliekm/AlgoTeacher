@@ -3,7 +3,7 @@ import React from 'react'
 import {motion, AnimatePresence} from 'framer-motion'
 import Link from 'next/link';
 
-function page() {
+function Page() {
   return (
     <AnimatePresence>
         <motion.div 
@@ -114,4 +114,4 @@ function page() {
   )
 }
 
-export default page
+export default Page
