@@ -10,7 +10,7 @@ function Page() {
     const [curQuestion, setCurQuestion] = useState(1)
     const [isCorrect, setIsCorrect] = useState(false)
     const [nextLevel, setNextLevel] = useState(false)
-    const ans = [13, 21, 14, 25]
+    const ans = [13, 21, 14, 24]
     const q = [
     {
         n: 3,
@@ -34,7 +34,7 @@ function Page() {
         n: 4,
         w: 18,
         u: [6, 14, 9, 2],
-        v: [9, 4, 2, 10]
+        v: [5, 18, 2, 6]
     },
     ]   
     function nextQuestion(){
