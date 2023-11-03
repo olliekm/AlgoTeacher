@@ -101,7 +101,7 @@ export default function Home() {
                   }}
                   className="text-center"
                 >
-                  <h2 className="font-mono text-3xl">I made Algo Teacher to show that learning algorithms doesn't have to be hard!</h2>
+                  <h2 className="font-mono text-3xl">I made Algo Teacher to show that learning algorithms doesn&apos;t have to be hard!</h2>
                 </motion.div>
                 <motion.div
                   initial={{ opacity: 0, scale: 0.5 }}

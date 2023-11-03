@@ -20,7 +20,7 @@ function page() {
                 <div className="">                    
                     <p>Think about the general steps and set of rules that lead you to your solution.</p>
                     <p>Would these apply to every situation?</p>
-                    <p>Let's look at one of the most important concepts, dp tables.</p>
+                    <p>Let&apos;s look at one of the most important concepts, dp tables.</p>
                     <p>For knapsack, we need a 2 dimensional dp table where at d[i][j], we store the max value we can obtain with a knapsack of size j.</p>
                     <p>With a dp table, we can perform useful operations.</p>
                     <p>Lets say we are checking whether we should an item n, this item n has a weight of u and a value of v. Therefore, the maximum value we can obtain if we take this item is the value at dp[i-1][j-u] + v. Meaning that if our item takes up u space, our effective knapsack space is  j-u, so we take the maximum value at our effective knapsack space     which is stored at dp[i-1][j-u]</p>

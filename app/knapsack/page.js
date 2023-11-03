@@ -110,7 +110,7 @@ function page() {
         </div>
             {
                 [...Array(curQuestion)].map((e, i) => (
-                    <KnapsackQuestion nextQuestion={() => nextQuestion()} w={q[i].w} v={q[i].v} u={q[i].u} n={q[i].n} ans={ans[i]} cur={curQuestion+1<q.length} />
+                    <KnapsackQuestion key={i} nextQuestion={() => nextQuestion()} w={q[i].w} v={q[i].v} u={q[i].u} n={q[i].n} ans={ans[i]} cur={curQuestion+1<q.length} />
                 ))
             }
             {/* {
