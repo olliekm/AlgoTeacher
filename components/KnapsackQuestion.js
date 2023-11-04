@@ -36,14 +36,17 @@ function KnapsackQuestion({w, v, u, n, ans, nextQuestion, cur}) {
         document.getElementById(n+"this").scrollIntoView({behavior:"smooth"})
     })
     
-
+    const [wrongAns, setWrongAns] = useState(false)
     const [uInput, setUInput] = useState(0)
     const [done, setDone] = useState(false)
 
     function checkAnswer(){
         if(uInput == ans){
             setDone(true)
+            setWrongAns(false)
             return nextQuestion()
+        } else {
+            setWrongAns(true)
         }
     }
 
@@ -67,7 +70,7 @@ function KnapsackQuestion({w, v, u, n, ans, nextQuestion, cur}) {
         variants={container}
         initial="hidden"
         animate="show"
-        className="flex justify-center items-center w-full gap-8 py-8">
+        className={`flex justify-center items-center w-full gap-8 py-8`}>
         <motion.div variants={item} className="h-48 w-48 border-2 flex items-center justify-center text-3xl font-serif rounded-2xl">
             <h1>Knapsack <br /> w = {w} </h1>
         </motion.div>
@@ -92,8 +95,12 @@ function KnapsackQuestion({w, v, u, n, ans, nextQuestion, cur}) {
         exist={{opacity:0, y:15}}
         transition={{delay:1}}
         className="w-full flex flex-col items-center">
-        <h1>What is the maximum value that you could leave with?</h1>
+        <h1 className={`${wrongAns ? 'text-red-500':'text-white'}`}>What is the maximum value that you could leave with?</h1>
         <input disabled={done} type="number" value={uInput} onChange={(e) => setUInput(e.target.value)} className='bg-black border-2' /> <button disabled={done} onClick={() => checkAnswer()} className='border-2 px-2 rounded-lg'>Check</button>
+        {
+            wrongAns &&
+            <small className='px-2 py-1 bg-red-500 m-2 rounded-sm animate-pulse'>Wrong answer, try again!</small>
+        }
     </motion.div>  
     </div>
     </div>

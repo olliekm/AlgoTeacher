@@ -16,6 +16,20 @@ const item = {
   show: { opacity: 1, scale:1 }
 }
 
+const gradients = [
+  'bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-amber-200 via-violet-600 to-sky-900',
+  'bg-[radial-gradient(ellipse_at_top,_var(--tw-gradient-stops))] from-gray-300 via-fuchsia-600 to-orange-600',
+  'bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-amber-700 via-orange-300 to-rose-800',
+  'bg-gradient-to-b from-gray-900 via-purple-900 to-violet-600',
+  'bg-gradient-to-t from-orange-400 to-sky-400',
+  'bg-gradient-to-tr from-violet-500 to-orange-300',
+  'bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500',
+  'bg-gradient-to-bl from-indigo-900 via-indigo-400 to-indigo-900',
+  'bg-[conic-gradient(at_left,_var(--tw-gradient-stops))] from-rose-500 to-indigo-700',
+  'bg-gradient-to-r from-sky-400 via-rose-400 to-lime-400'
+  
+]
+
 
 export default function Home() {
   return (
@@ -37,7 +51,7 @@ export default function Home() {
                   delay: 0.2,
                   ease: [0, 0.71, 0.2, 1.01]
                 }}
-              className="w-full relative h-full text-center flex space-y-8 flex-col items-center justify-center bg-[radial-gradient(ellipse_at_bottom,_var(--tw-gradient-stops))] from-amber-200 via-violet-600 to-sky-900 lg:rounded-[8rem] rounded-3xl shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]">
+              className={`w-full relative h-full text-center flex space-y-8 flex-col items-center justify-center ${gradients[Math.floor(Math.random() * 10)]}  lg:rounded-[8rem] rounded-3xl shadow-[0_20px_50px_rgba(8,_112,_184,_0.7)]`}>
                 <div className="absolute bottom-0 w-full flex justify-center py-4">
                   <motion.h1
                     initial={{ opacity: 0, scale: 0.5 }}
@@ -47,11 +61,12 @@ export default function Home() {
                       delay: 1,
                       ease: [0, 0.71, 0.2, 1.01]
                     }}
-                    className="text-indigo-800 text-2xl uppercase tracking-widest font-light"
+                    className="text-white text-2xl uppercase tracking-widest font-light space-x-8"
                   >
                     <Link href={'/about'}>
                       About me
                     </Link>
+                    <Link href={'/resources'}>Resources</Link>
                   </motion.h1>
                 </div>
                 <motion.div
