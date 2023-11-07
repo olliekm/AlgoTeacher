@@ -112,11 +112,11 @@ function Page() {
         <h1 
 
 
-        class="bg-[conic-gradient(a t_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 group-hover:tracking-[.3em] ease-in duration-75  text-5xl inline-block text-transparent bg-clip-text font-serif mt-8">Complete lesson</h1>
+        class=" group-hover:tracking-[.3em] ease-in duration-75  text-5xl text-white font-serif mt-8">Complete lesson</h1>
 
         <h1 
 
-        class="bg-[conic-gradient(at_top,_var(--tw-gradient-stops))] from-gray-900 via-gray-100 to-gray-900 text-xl inline-block text-transparent bg-clip-text font-serif mt-8">Apply what you learned</h1>
+class=" group-hover:tracking-[.3em] ease-in duration-75  text-sxl text-white font-serif mt-8">Apply what you learned</h1>
 
         </div>
     </main>
